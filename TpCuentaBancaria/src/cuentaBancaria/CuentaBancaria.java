@@ -19,4 +19,9 @@ public class CuentaBancaria {
 	public void depositarMonto(double montoDeposito) {
 		this.monto = montoDeposito;
 	}
+	
+	public void transferirMontoHacia(double montoTransferir, CuentaBancaria destino) {
+		this.monto -= montoTransferir;
+		destino.monto+=montoTransferir;
+	}
 }
