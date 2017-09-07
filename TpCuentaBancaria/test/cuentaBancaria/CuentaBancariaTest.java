@@ -1,5 +1,20 @@
 package cuentaBancaria;
 
-public class CuentaBancariaTest {
+import org.junit.Test;
 
+import org.junit.Assert;
+import org.junit.Before;
+
+public class CuentaBancariaTest {
+	CuentaBancaria cb;
+
+	@Before
+	public void setUp() {
+		cb = new CuentaBancaria();
+	}
+
+	@Test
+	public void queIniciaEnCero() {
+		Assert.assertEquals(0, cb.getMonto());
+	}
 }
