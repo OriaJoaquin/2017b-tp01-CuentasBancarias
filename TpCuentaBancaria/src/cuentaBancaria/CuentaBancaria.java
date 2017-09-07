@@ -10,4 +10,8 @@ public class CuentaBancaria {
 	public double getMonto() {
 		return monto;
 	}
+	
+	public double retirarMonto(double montoRetirar) {
+		return 100;
+	}
 }

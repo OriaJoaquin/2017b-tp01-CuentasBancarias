@@ -20,6 +20,6 @@ public class CuentaBancariaTest {
 	
 	@Test
 	public void queRetireCien() {
-		Assert.assertEquals(100, cb.retirarMonto(),0.01);
+		Assert.assertEquals(100, cb.retirarMonto(100),0.01);
 	}
 }
