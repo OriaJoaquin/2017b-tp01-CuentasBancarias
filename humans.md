@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Oria, Joaquin Ariel ([OriaJoaquin](https://github.com/OriaJoaquin))
+* Magallanes, Lucas Ariel ([lucasMagallanes](https://github.com/lucasMagallanes))
