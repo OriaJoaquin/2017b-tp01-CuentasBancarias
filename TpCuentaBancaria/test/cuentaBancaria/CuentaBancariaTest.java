@@ -7,10 +7,12 @@ import org.junit.Before;
 
 public class CuentaBancariaTest {
 	CuentaBancaria cb;
+	CuentaBancaria cb1;
 
 	@Before
 	public void setUp() {
 		cb = new CuentaBancaria();
+		cb1 = new CuentaBancaria();
 	}
 
 	@Test
@@ -44,5 +46,16 @@ public class CuentaBancariaTest {
 		cb.depositarMonto(500);
 		cb.retirarMonto(300);
 		Assert.assertEquals(200, cb.getMonto(), 0.01);
+	}
+	
+	@Test
+	public void queSeTrafieraDineroDeCuentaACuenta(){
+		cb.depositarMonto(500);
+		cb1.depositarMonto(1000);
+		
+		cb1.transferirMontoHacia(250, cb);
+		
+		Assert.assertEquals(750, cb.getMonto(),0.01);
+		Assert.assertEquals(750, cb1.getMonto(),0.01);
 	}
 }
