@@ -17,4 +17,9 @@ public class CuentaBancariaTest {
 	public void queIniciaEnCero() {
 		Assert.assertEquals(0, cb.getMonto(),0.01);
 	}
+	
+	@Test
+	public void queRetireCien() {
+		Assert.assertEquals(100, cb.retirarMonto(),0.01);
+	}
 }
