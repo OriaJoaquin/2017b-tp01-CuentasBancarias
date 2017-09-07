@@ -12,10 +12,6 @@ public class CuentaBancaria {
 	}
 	
 	public double retirarMonto(double montoRetirar) {
-		if (montoRetirar==100)
-			return 100;
-		if(montoRetirar==200)
-			return 200;
-		return 300;
+		return montoRetirar;
 	}
 }
