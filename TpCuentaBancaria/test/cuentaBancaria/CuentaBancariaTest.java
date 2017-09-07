@@ -42,6 +42,7 @@ public class CuentaBancariaTest {
 	@Test
 	public void queResteDineroCuandoRetiro() {
 		cb.depositarMonto(500);
-		Assert.assertEquals(200, cb.retirarMonto(300),0.01);
+		cb.retirarMonto(300);
+		Assert.assertEquals(200, cb.getMonto(),0.01);
 	}
 }

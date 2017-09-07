@@ -12,6 +12,7 @@ public class CuentaBancaria {
 	}
 	
 	public double retirarMonto(double montoRetirar) {
+		this.monto-=montoRetirar;
 		return montoRetirar;
 	}
 	
