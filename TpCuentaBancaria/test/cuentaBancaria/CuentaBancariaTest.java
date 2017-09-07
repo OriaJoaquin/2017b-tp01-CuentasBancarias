@@ -27,4 +27,9 @@ public class CuentaBancariaTest {
 	public void queRetireDosciento() {
 		Assert.assertEquals(200, cb.retirarMonto(200),0.01);
 	}
+	
+	@Test
+	public void queRetireTrescientos() {
+		Assert.assertEquals(300, cb.retirarMonto(300),0.01);
+	}
 }
