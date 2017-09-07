@@ -14,4 +14,8 @@ public class CuentaBancaria {
 	public double retirarMonto(double montoRetirar) {
 		return montoRetirar;
 	}
+	
+	public void depositarMonto(double montoDeposito) {
+		this.monto=montoDeposito;
+	}
 }
