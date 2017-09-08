@@ -58,4 +58,10 @@ public class CuentaBancariaTest {
 		Assert.assertEquals(750, cb.getMonto(),0.01);
 		Assert.assertEquals(750, cb1.getMonto(),0.01);
 	}
+	
+	@Test(expected = Exception.class)
+	public void queInformeSaldoInsuficiente() {
+		cb1.depositarMonto(100);
+		cb1.retirarMonto(300);
+	}
 }
