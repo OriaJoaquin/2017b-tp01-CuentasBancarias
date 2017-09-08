@@ -11,7 +11,9 @@ public class CuentaBancaria {
 		return monto;
 	}
 
-	public double retirarMonto(double montoRetirar) {
+	public double retirarMonto(double montoRetirar) throws RuntimeException {
+		if(montoRetirar>this.monto)
+			throw new RuntimeException("Saldo insuficiente.");
 		this.monto -= montoRetirar;
 		return montoRetirar;
 	}

@@ -22,16 +22,19 @@ public class CuentaBancariaTest {
 
 	@Test
 	public void queRetireCien() {
+		cb.depositarMonto(100);
 		Assert.assertEquals(100, cb.retirarMonto(100), 0.01);
 	}
 
 	@Test
 	public void queRetireDosciento() {
+		cb.depositarMonto(200);
 		Assert.assertEquals(200, cb.retirarMonto(200), 0.01);
 	}
 
 	@Test
 	public void queRetireTrescientos() {
+		cb.depositarMonto(300);
 		Assert.assertEquals(300, cb.retirarMonto(300), 0.01);
 	}
 
@@ -47,18 +50,18 @@ public class CuentaBancariaTest {
 		cb.retirarMonto(300);
 		Assert.assertEquals(200, cb.getMonto(), 0.01);
 	}
-	
+
 	@Test
-	public void queSeTrafieraDineroDeCuentaACuenta(){
+	public void queSeTrafieraDineroDeCuentaACuenta() {
 		cb.depositarMonto(500);
 		cb1.depositarMonto(1000);
-		
+
 		cb1.transferirMontoHacia(250, cb);
-		
-		Assert.assertEquals(750, cb.getMonto(),0.01);
-		Assert.assertEquals(750, cb1.getMonto(),0.01);
+
+		Assert.assertEquals(750, cb.getMonto(), 0.01);
+		Assert.assertEquals(750, cb1.getMonto(), 0.01);
 	}
-	
+
 	@Test(expected = Exception.class)
 	public void queInformeSaldoInsuficiente() {
 		cb1.depositarMonto(100);
